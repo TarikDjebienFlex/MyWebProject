@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:local="*"
+			   xmlns:views="views.*"
+			   minWidth="955" minHeight="600" preinitialize="initIOC(event)"
+			   viewSourceURL="srcview/index.html">
+	<fx:Script>
+		<![CDATA[
+			import models.DataModel;
+			import mediators.SearchViewMediator;
+			import commands.GetKulerCommand;
+			
+			import mx.events.FlexEvent;
+			import mx.rpc.AsyncToken;
+			
+			import org.spicefactory.parsley.core.context.Context;
+			import org.spicefactory.parsley.core.events.ContextEvent;
+			import org.spicefactory.parsley.core.factory.impl.GlobalFactoryRegistry;
+			import org.spicefactory.parsley.rpc.flex.command.AsyncTokenCommandFactory;
+			import org.spicefactory.parsley.xml.XmlContextBuilder;
+			
+			private var _context:Context;
+			
+			private var _beans:Array = [
+										SearchViewMediator, 
+										DataModel,
+										GetKulerCommand
+									   ];
+			
+			protected function initIOC(event:FlexEvent):void
+			{
+				_context = XmlContextBuilder.build( "config/config.xml", this);
+				_context.addEventListener(ContextEvent.INITIALIZED, onContextInit);
+				
+				GlobalFactoryRegistry.instance.messageRouter.addCommandFactory(AsyncToken, new AsyncTokenCommandFactory() );
+			}
+			
+			protected function onContextInit(event:ContextEvent):void
+			{
+				trace(event.toString());
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
+	</fx:Declarations>
+	
+	<views:SearchView id="searchView" />
+	
+</s:Application>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index>
+	<title>Source de Parsley</title>
+	<nodes>
+		<node label="html-template">
+			<node label="history">
+				<node icon="cssIcon" label="history.css" url="source/html-template/history/history.css.html"/>
+				<node label="history.js" url="source/html-template/history/history.js.txt"/>
+				<node icon="htmlIcon" label="historyFrame.html" url="source/html-template/history/historyFrame.html"/>
+			</node>
+			<node icon="htmlIcon" label="index.template.html" url="source/html-template/index.template.html"/>
+			<node icon="swfIcon" label="playerProductInstall.swf" url="source/html-template/playerProductInstall.swf"/>
+			<node label="swfobject.js" url="source/html-template/swfobject.js.txt"/>
+		</node>
+		<node label="libs">
+			<node label="parsley-flex4-2.2.2.swc" url="source/libs/parsley-flex4-2.2.2.swc"/>
+			<node label="spicelib-flex-2.2.2.swc" url="source/libs/spicelib-flex-2.2.2.swc"/>
+		</node>
+		<node label="src">
+			<node icon="packageIcon" label="commands" expanded="true">
+				<node icon="actionScriptIcon" label="GetKulerCommand.as" url="source/commands/GetKulerCommand.as.html"/>
+			</node>
+			<node label="config">
+				<node label="config.xml" url="source/config/config.xml.txt"/>
+			</node>
+			<node icon="packageIcon" label="mediators" expanded="true">
+				<node icon="actionScriptIcon" label="SearchViewMediator.as" url="source/mediators/SearchViewMediator.as.html"/>
+			</node>
+			<node icon="packageIcon" label="messages" expanded="true">
+				<node icon="actionScriptIcon" label="GetKulerMessage.as" url="source/messages/GetKulerMessage.as.html"/>
+			</node>
+			<node icon="packageIcon" label="models" expanded="true">
+				<node icon="actionScriptIcon" label="DataModel.as" url="source/models/DataModel.as.html"/>
+			</node>
+			<node icon="packageIcon" label="views" expanded="true">
+				<node icon="mxmlIcon" label="SearchView.mxml" url="source/views/SearchView.mxml.html"/>
+			</node>
+			<node icon="mxmlAppIcon" selected="true" label="KulerApp.mxml" url="source/KulerApp.mxml.html"/>
+		</node>
+	</nodes>
+	<zipfile label="Télécharger la source (ZIP, 311 ko)" url="Parsley.zip">
+	</zipfile>
+	<sdklink label="Télécharger le SDK Flex " url="http://www.adobe.com/go/flex451_sdk_download_fr_FR_fr_FR">
+	</sdklink>
+</index>

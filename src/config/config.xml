@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<objects xmlns="http://www.spicefactory.org/parsley"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://www.spicefactory.org/parsley 
+		 http://www.spicefactory.org/parsley/schema/2.0/parsley-core.xsd">
+		 
+	<object id="mediator" type="mediators.SearchViewMediator" />
+	<object id="model" type="models.DataModel" />
+	<object id="command" type="commands.GetKulerCommand" />
+	<object id="service" type="mx.rpc.http.HTTPService" />
+	
+</objects>
